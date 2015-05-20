@@ -11,8 +11,8 @@ function ping_pong_menu()
         'access callback' => TRUE,
         'type' => MENU_NORMAL_ITEM
     );
-    $items['success']   = array(
-        'title' => 'Success',
+    $items['bob']   = array(
+        'title' => 'Ping Pong',
         'page callback' => 'ping_pong_success',
         'access callback' => TRUE,
         'type' => MENU_CALLBACK
@@ -53,7 +53,7 @@ function ping_pong_form_submit($form, &$form_state)
     }
 
     $_SESSION['ping_pong_output'] = $pingpong_output;
-    $form_state['redirect']       = 'success';
+    $form_state['redirect']       = 'bob';
 }
 
 function ping_pong_success()
